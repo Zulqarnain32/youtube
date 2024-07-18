@@ -1,12 +1,12 @@
 import React from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { IoIosSearch } from "react-icons/io";
+import { IoIosSearch, IoIosNotificationsOutline } from "react-icons/io";
 import { FaMicrophone } from "react-icons/fa6";
-
+import { HiOutlineFolderPlus } from "react-icons/hi2";
 const Navbar = () => {
   return (
     <>
-      <div className="flex justify-between border px-5 py-3 h-16 ">
+      <div className="flex justify-between border px-7 py-3 h-16 ">
         <div className=" flex items-center space-x-4 ">
           <RxHamburgerMenu className="text-xl " />
           <img src="/assets/youtube.png" className=" w-8 " />
@@ -28,7 +28,11 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className="border  border-red-600">3</div>
+        <div className="w-[160px] flex items-center justify-end space-x-5">
+          <HiOutlineFolderPlus size={26} className= "rounded-full h-10 w-10 p-2 hover:bg-gray-200"/>
+          <IoIosNotificationsOutline size={26}  className= "rounded-full h-10 w-10 p-2 hover:bg-gray-200"/>
+          <span className="h-10 w-10 bg-slate-500 rounded-full flex items-center justify-center text-white">Z</span>
+        </div>
       </div>
     </>
   );
