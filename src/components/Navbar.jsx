@@ -3,12 +3,13 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosSearch, IoIosNotificationsOutline } from "react-icons/io";
 import { FaMicrophone } from "react-icons/fa6";
 import { HiOutlineFolderPlus } from "react-icons/hi2";
-const Navbar = () => {
+const Navbar = ({toggleSidebar}) => {
+
   return (
     <>
-      <div className="flex justify-between border px-7 py-3 h-16 ">
+      <div className="flex justify-between border px-7 py-3 h-16 sticky top-0 bg-blue-100 ">
         <div className=" flex items-center space-x-4 ">
-          <RxHamburgerMenu className="text-xl " />
+          <RxHamburgerMenu className="text-xl" onClick={toggleSidebar} />
           <img src="/assets/logo.png" className=" w-[120px] " />
         </div>
 

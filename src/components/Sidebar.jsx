@@ -34,8 +34,7 @@ import { MdOutlineReport } from "react-icons/md";
 import { IoMdHelpCircleOutline } from "react-icons/io";
 import { MdOutlineFeedback } from "react-icons/md";
 
-const Sidebar = () => {
-    const [showSidebar,setShowSidebar] = useState(false)
+const Sidebar = ({isVisible}) => {
   const sidebarData = [
     {
       id: 1,
@@ -161,7 +160,7 @@ const Sidebar = () => {
   ];
   return (
     <>
-      <div className="px-3 py-5 w-[16%]">
+      <div className={`sidebar ${isVisible ? "visible" : ""}`}>
         <div className="space-y-1">
           {sidebarData.map((elm, i) => (
             <div key={i}>
