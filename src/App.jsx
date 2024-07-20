@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar'
 import("./App.css")
 const App = () => {
 
-  const [isSidebarVisible, setSidebarVisible] = useState(false);
+  const [isSidebarVisible, setSidebarVisible] = useState(true);
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);

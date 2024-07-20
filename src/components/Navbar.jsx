@@ -7,7 +7,7 @@ const Navbar = ({toggleSidebar}) => {
 
   return (
     <>
-      <div className="flex justify-between border px-7 py-3 h-16 sticky top-0 bg-blue-100 ">
+      <div className="flex justify-between border px-7 py-3 h-16 fixed w-[100%] z-10 top-0 bg-blue-100 ">
         <div className=" flex items-center space-x-4 ">
           <RxHamburgerMenu className="text-xl" onClick={toggleSidebar} />
           <img src="/assets/logo.png" className=" w-[120px] " />

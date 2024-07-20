@@ -160,7 +160,7 @@ const Sidebar = ({isVisible}) => {
   ];
   return (
     <>
-      <div className={`sidebar ${isVisible ? "visible" : ""}`}>
+      <div className={`sidebar overflow-y-scroll overflow-x-hidden ${isVisible ? "visible" : ""}`}>
         <div className="space-y-1">
           {sidebarData.map((elm, i) => (
             <div key={i}>
