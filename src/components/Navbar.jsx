@@ -7,10 +7,10 @@ const Navbar = ({toggleSidebar}) => {
 
   return (
     <>
-      <div className="flex justify-between border px-7 py-3 h-16 fixed w-[100%] z-10 top-0 bg-blue-100 ">
+      <div className="flex justify-between  px-7 py-3 h-16 fixed w-[100%] z-10 top-0 bg-blue-00 bg-white ">
         <div className=" flex items-center space-x-4 ">
-          <RxHamburgerMenu className="text-xl" onClick={toggleSidebar} />
-          <img src="/assets/logo.png" className=" w-[120px] " />
+          <RxHamburgerMenu className="text-xl cursor-pointer" onClick={toggleSidebar} />
+          <img src="/assets/logo.png" className=" w-[120px] cursor-pointer" />
         </div>
 
         <div className="flex  w-1/2   items-center">
@@ -30,9 +30,9 @@ const Navbar = ({toggleSidebar}) => {
         </div>
 
         <div className="w-[160px] flex items-center justify-end space-x-3">
-          <HiOutlineFolderPlus size={26} className= "rounded-full h-10 w-10 p-2 hover:bg-gray-200"/>
-          <IoIosNotificationsOutline size={26}  className= "rounded-full h-10 w-10 p-2 hover:bg-gray-200"/>
-          <span className="h-10 w-10 bg-slate-500 rounded-full flex items-center justify-center text-white">Z</span>
+          <HiOutlineFolderPlus size={26} className= "rounded-full h-10 w-10 p-2 hover:bg-gray-200 cursor-pointer"/>
+          <IoIosNotificationsOutline size={26}  className= "rounded-full h-10 w-10 p-2 hover:bg-gray-200 cursor-pointer"/>
+          <span className="h-10 w-10 bg-slate-500 rounded-full flex items-center justify-center text-white cursor-pointer">Z</span>
         </div>
       </div>
     </>
