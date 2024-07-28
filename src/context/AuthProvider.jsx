@@ -4,30 +4,32 @@ import { fetchYoutubeData } from "../utils/rapidapi";
 export const AuthContext = createContext();
 
 export default function AuthProvider({ children }) {
-    const [loading, setLoading] = useState(false)
-    const [data, setData] = useState([])
-    const [value, setValue] = useState("New")
-
+    const [loading, setLoading] = useState(false);
+    const [data, setData] = useState([]);
+    const [value, setValue] = useState("New");
 
     useEffect(() => {
-        fetchAllData(value)
-    }, [value])
+        console.log("Value changed:", value);
+        fetchAllData(value);
+    }, [value]);
 
-    const fetchAllData = (query) => {
-        setLoading(true)
-        fetchYoutubeData(`search/?q=${query}`).then((res) => {
-            setData(res)
-            setLoading(false)
-        })
-    }
+    const fetchAllData = async (query) => {
+        setLoading(true);
+        try {
+            const res = await fetchYoutubeData(`search/?q=${query}`);
+            setData(res);
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     return (
-        <>
-            <AuthProvider value={{ data, loading, setValue }}>
-                {children}
-            </AuthProvider>
-        </>
-    )
+        <AuthContext.Provider value={{ data, loading, setValue }}>
+            {children}
+        </AuthContext.Provider>
+    );
 }
 
-export const useAuth = () => useContext(AuthContext)
+export const useAuth = () => useContext(AuthContext);

@@ -1,11 +1,11 @@
 import React,{useState} from 'react'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
-import { useAuth } from './context/AuthProvider'
+// import { useAuth } from './context/AuthProvider'
 import("./App.css")
 const App = () => {
-  const {loading} = useAuth()
-  console.log("loaidng",loading);
+  // const {loading} = useAuth()
+  // console.log("loaidng",loading);
 
   const [isSidebarVisible, setSidebarVisible] = useState(true);
 
