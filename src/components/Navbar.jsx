@@ -3,28 +3,27 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosSearch, IoIosNotificationsOutline } from "react-icons/io";
 import { FaMicrophone } from "react-icons/fa6";
 import { HiOutlineFolderPlus } from "react-icons/hi2";
-const Navbar = ({toggleSidebar}) => {
-
+const Navbar = () => {  
   return (
     <>
-      <div className="flex justify-between  px-7 py-3 h-16 fixed w-[100%] z-10 top-0 bg-blue-00 bg-white ">
-        <div className=" flex items-center space-x-4 ">
-          <RxHamburgerMenu className="text-xl cursor-pointer" onClick={toggleSidebar} />
-          <img src="/assets/logo.png" className=" w-[120px] cursor-pointer" />
+      <div className="flex justify-between px-3 md:px-7 py-3 h-16 sticky top-0 w-[100%] z-10  bg-blue-00 bg-white">
+        <div className=" flex items-center md:space-x-4 ">
+          <RxHamburgerMenu className="text-xl cursor-pointer hidden "  />
+          <img src="/assets/logo.png" className=" w-[120px] cursor-pointer " />
         </div>
 
         <div className="flex  w-1/2   items-center">
-          <div className="flex items-center  w-[88%] h-full bg-gray-400 rounded-full">
+          <div className="hidden  items-center  w-[88%] h-full bg-gray-400 rounded-full">
             <input
               type="text"
               placeholder=" Search"
-              className="border outline-none w-[90%] h-full rounded-l-full px-3 focus:border-gray-700"
+              className="hidden border outline-none w-[90%] h-full rounded-l-full px-3 focus:border-gray-700"
             />
             <button className="bg-gray-100 hover:bg-gray-300 h-full w-[12%] flex items-center justify-center border rounded-r-full">
               <IoIosSearch size={"24px"} />
             </button>
           </div>
-          <button className="bg-gray-100 ml-3 h-10 w-10 border rounded-full flex items-center justify-center hover:bg-gray-300">
+          <button className="bg-gray-100 ml-3 hidden h-10 w-10 border rounded-full flex items-center justify-center hover:bg-gray-300">
             <FaMicrophone size={"18px"} className="" />
           </button>
         </div>
